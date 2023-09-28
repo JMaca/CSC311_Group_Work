@@ -39,6 +39,9 @@ public class MazeController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        for (Node r : group_Rectangles.getChildren()) {
+            walls.add((Rectangle) r);
+        }
         mazeImg.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent key) {
