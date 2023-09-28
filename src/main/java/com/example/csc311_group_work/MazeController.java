@@ -27,6 +27,16 @@ public class MazeController implements Initializable {
     List<Rectangle> walls = new ArrayList<>();
     List<String> codes = new ArrayList<>();
 
+    AnimationTimer collisionTimer = new AnimationTimer() {
+        @Override
+        public void handle(long l) {
+            if (collisionHandler(robotImgContainer, group_Rectangles)) {
+                System.out.println("Collision occurred.");
+                collisionTimer.stop();
+            }
+        }
+    };
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         mazeImg.setOnKeyPressed(new EventHandler<KeyEvent>() {
