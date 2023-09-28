@@ -4,9 +4,12 @@ import javafx.animation.AnimationTimer;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Group;
+import javafx.scene.Node;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.StackPane;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -31,5 +34,14 @@ public class MazeController implements Initializable {
                 }
             }
         });
+    }
+
+    private boolean collisionHandler(StackPane robotImgContainer, Group groupRectangles) {
+        for (Node r : group_Rectangles.getChildren()) {
+            if (r.getLayoutBounds().intersects(robotImgContainer.getBoundsInParent())) {
+                return true;
+            }
+        }
+        return false;
     }
 }
