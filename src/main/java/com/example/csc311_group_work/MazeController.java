@@ -42,17 +42,24 @@ public class MazeController implements Initializable {
         for (Node r : group_Rectangles.getChildren()) {
             walls.add((Rectangle) r);
         }
+        collisionTimer.start();
         mazeImg.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent key) {
+                if (!codes.contains(key.getCode().toString())) {
+                    codes.add(key.getCode().toString());
+                }
+                double currLayoutPosX = robotImgContainer.getLayoutX();
+                double currLayoutPosY = robotImgContainer.getLayoutY();
+
                 if (key.getCode().equals(KeyCode.RIGHT)) {
-                    robotImg.setLayoutX(robotImg.getLayoutX() + 5);
+                    robotImgContainer.setLayoutX(robotImgContainer.getLayoutX() + 5);
                 } else if (key.getCode().equals(KeyCode.LEFT)) {
-                    robotImg.setLayoutX(robotImg.getLayoutX() - 5);
+                    robotImgContainer.setLayoutX(robotImgContainer.getLayoutX() - 5);
                 }else if (key.getCode().equals(KeyCode.UP)) {
-                    robotImg.setLayoutY(robotImg.getLayoutY() - 5);
+                    robotImgContainer.setLayoutY(robotImgContainer.getLayoutY() - 5);
                 }else if (key.getCode().equals(KeyCode.DOWN)) {
-                    robotImg.setLayoutY(robotImg.getLayoutY() + 5);
+                    robotImgContainer.setLayoutY(robotImgContainer.getLayoutY() + 5);
                 }
             }
         });

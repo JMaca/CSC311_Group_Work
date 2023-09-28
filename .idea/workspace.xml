@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96dad00f-4aab-471b-aad4-bcb13d630424" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="96dad00f-4aab-471b-aad4-bcb13d630424" name="Changes" comment="add each rectangle to walls list">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/csc311_group_work/MazeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/csc311_group_work/MazeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/csc311_group_work/anchorMaze.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/csc311_group_work/anchorMaze.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +90,19 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration name="MazeApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.csc311_group_work.MazeApplication" />
+      <module name="CSC311_Group_Work" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.csc311_group_work.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="DjangoTestsConfigurationType">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -182,6 +193,11 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MazeApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -195,7 +211,7 @@
       <workItem from="1695679176167" duration="4091000" />
       <workItem from="1695768754657" duration="438000" />
       <workItem from="1695855208736" duration="1718000" />
-      <workItem from="1695944552212" duration="41000" />
+      <workItem from="1695944552212" duration="383000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Upload of framework for maze project.">
       <option name="closed" value="true" />
@@ -213,7 +229,47 @@
       <option name="project" value="LOCAL" />
       <updated>1695768800121</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update fxml">
+      <option name="closed" value="true" />
+      <created>1695944618488</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1695944618488</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add collisionHandler method">
+      <option name="closed" value="true" />
+      <created>1695944631422</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1695944631422</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add components from FXML">
+      <option name="closed" value="true" />
+      <created>1695944653614</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1695944653614</updated>
+    </task>
+    <task id="LOCAL-00006" summary="create collisionTimer and create temp handle method">
+      <option name="closed" value="true" />
+      <created>1695944716527</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1695944716527</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add each rectangle to walls list">
+      <option name="closed" value="true" />
+      <created>1695944738798</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1695944738798</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,6 +300,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Upload of framework for maze project." />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Upload of framework for maze project." />
+    <MESSAGE value="update fxml" />
+    <MESSAGE value="add collisionHandler method" />
+    <MESSAGE value="add components from FXML" />
+    <MESSAGE value="create collisionTimer and create temp handle method" />
+    <MESSAGE value="add each rectangle to walls list" />
+    <option name="LAST_COMMIT_MESSAGE" value="add each rectangle to walls list" />
   </component>
 </project>
