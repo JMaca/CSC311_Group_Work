@@ -10,13 +10,22 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.StackPane;
+import javafx.scene.shape.Rectangle;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class MazeController implements Initializable {
     @FXML
     public ImageView robotImg, mazeImg;
+    @FXML
+    public Group group_Rectangles;
+    public StackPane robotImgContainer;
+    public Rectangle testRect;
+    List<Rectangle> walls = new ArrayList<>();
+    List<String> codes = new ArrayList<>();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
