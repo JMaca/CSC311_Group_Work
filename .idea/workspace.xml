@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96dad00f-4aab-471b-aad4-bcb13d630424" name="Changes" comment="Update to make new controller for second maze. Added functionality to menu bar.">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/csc311_group_work/MazeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/csc311_group_work/MazeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/csc311_group_work/anchorMaze.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/csc311_group_work/anchorMaze.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/csc311_group_work/maze2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/csc311_group_work/maze2.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="96dad00f-4aab-471b-aad4-bcb13d630424" name="Changes" comment="Update to make new controller for second maze. Added functionality to menu bar." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,7 +59,7 @@
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
-        <option name="accountId" value="b553e5b3-24be-4189-b82d-48a3944d790d" />
+        <option name="accountId" value="0d79cd86-af69-4cf4-a714-3ada44dddd3b" />
         <option name="url" value="https://github.com/JMaca/CSC311_Group_Work.git" />
       </UrlAndAccount>
     </option>
@@ -311,7 +305,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696094014536</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Update to make new controller for second maze. Added functionality to menu bar.">
+      <option name="closed" value="true" />
+      <created>1696115669816</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1696115669817</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,6 +351,7 @@
     <MESSAGE value="add each rectangle to walls list" />
     <MESSAGE value="enabled switch MenuItem to open a screen with the other maze." />
     <MESSAGE value="tried to mimmick the code that moves the robot to move the car, but im having trouble getting it to work" />
-    <option name="LAST_COMMIT_MESSAGE" value="tried to mimmick the code that moves the robot to move the car, but im having trouble getting it to work" />
+    <MESSAGE value="Update to make new controller for second maze. Added functionality to menu bar." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update to make new controller for second maze. Added functionality to menu bar." />
   </component>
 </project>
