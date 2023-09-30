@@ -267,7 +267,12 @@ public class MazeController{
                 }
             }
             return true;
+            /* Out of bounds exception is thrown but its handled here and in return we print a congratulations message.
+               Congratulations message is printed because the only exposed edge for this exception to be thrown is at the
+               end of the maze.
+             */
         } catch (Exception e) {
+            System.out.println("You reached the end of the maze! Congratulations!");
             return false;
         }
     }
