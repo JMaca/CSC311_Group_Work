@@ -19,7 +19,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Optional;
 
-public class MazeController{
+public class MazeController {
 
     @FXML
     private ImageView mazeImg, maze2Img, carImage;
@@ -103,14 +103,18 @@ public class MazeController{
      * @return returns true or false based on if the robot can move left
      */
     private boolean canMoveLeft(double x, double y, PixelReader pixelReader){
-        //This for loop checks the line of pixels to the left of the robot
-        for(int i = 0; i < robotImgContainer.getPrefHeight(); i++) {
-            Color color = pixelReader.getColor((int) x - 1, (int) y + i);
-            if(isWall(color)) {
-                return false;
+        if (x >= 0) {
+            //This for loop checks the line of pixels to the left of the robot
+            for (int i = 0; i < robotImgContainer.getPrefHeight(); i++) {
+                Color color = pixelReader.getColor((int) x - 1, (int) y + i);
+                if (isWall(color)) {
+                    return false;
+                }
             }
+            return true;
+        } else {
+            return false;
         }
-        return true;
     }
     /**
      * Checks to see if the robot can move right without hitting a wall
@@ -119,14 +123,29 @@ public class MazeController{
      * @param pixelReader used to read the pixel color from mazeImg
      * @return returns true or false based on if the robot can move right
      */
+    int congratsMsgCounter = 1; // Counter for congrats message
     private boolean canMoveRight(double x, double y, PixelReader pixelReader){
-        for (int i = 0; i < robotImgContainer.getPrefHeight(); i++){
-            Color color = pixelReader.getColor((int) (x + robotImgContainer.getPrefWidth() + 1), (int) y + i);
-            if (isWall(color)){
-                return false;
+
+        try {
+            for (int i = 0; i < robotImgContainer.getPrefHeight(); i++) {
+                Color color = pixelReader.getColor((int) (x + robotImgContainer.getPrefWidth() + 1), (int) y + i);
+                if (isWall(color)) {
+                    return false;
+                }
             }
+            return true;
+            /* Out of bounds exception is thrown but its handled here and in return we print a congratulations message.
+               Congratulations message is printed because the only exposed edge for this exception to be thrown is at the
+               end of the maze.
+             */
+        } catch (Exception e) {
+            // While loop below prevents the congrats message from being spammed b/c of repeatedly hitting the edge
+            while (congratsMsgCounter > 0) {
+                System.out.println("You reached the end of the maze! Congratulations!");
+                congratsMsgCounter--;
+            }
+            return false;
         }
-        return true;
     }
     /**
      * Checks to see if the robot can move up without hitting a wall
