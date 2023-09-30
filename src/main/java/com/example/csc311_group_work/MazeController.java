@@ -258,7 +258,9 @@ public class MazeController{
      * @param pixelReader used to read the pixel color from mazeImg
      * @return returns true or false based on if the robot can move right
      */
+    int congratsMsgCounter = 1; // Counter for congrats message
     private boolean canMoveRight(double x, double y, PixelReader pixelReader){
+
         try {
             for (int i = 0; i < robotImgContainer.getPrefHeight(); i++) {
                 Color color = pixelReader.getColor((int) (x + robotImgContainer.getPrefWidth() + 1), (int) y + i);
@@ -272,7 +274,11 @@ public class MazeController{
                end of the maze.
              */
         } catch (Exception e) {
-            System.out.println("You reached the end of the maze! Congratulations!");
+            // While loop below prevents the congrats message from being spammed b/c of repeatedly hitting the edge
+            while (congratsMsgCounter > 0) {
+                System.out.println("You reached the end of the maze! Congratulations!");
+                congratsMsgCounter--;
+            }
             return false;
         }
     }

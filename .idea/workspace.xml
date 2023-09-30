@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96dad00f-4aab-471b-aad4-bcb13d630424" name="Changes" comment="turn switch case into enhanced form">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/csc311_group_work/MazeTwoController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/csc311_group_work/maze2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/csc311_group_work/maze2.fxml" afterDir="false" />
+    <list default="true" id="96dad00f-4aab-471b-aad4-bcb13d630424" name="Changes" comment="delete MazeTwoController class (implementation handled by a team member)">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/csc311_group_work/MazeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/csc311_group_work/MazeController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,7 +224,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696113731568</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="delete MazeTwoController class (implementation handled by a team member)">
+      <option name="closed" value="true" />
+      <created>1696116003591</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1696116003591</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,6 +273,7 @@
     <MESSAGE value="change controller class" />
     <MESSAGE value="import all existing maze2 code from maze one controller into maze2 controller" />
     <MESSAGE value="turn switch case into enhanced form" />
-    <option name="LAST_COMMIT_MESSAGE" value="turn switch case into enhanced form" />
+    <MESSAGE value="delete MazeTwoController class (implementation handled by a team member)" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete MazeTwoController class (implementation handled by a team member)" />
   </component>
 </project>

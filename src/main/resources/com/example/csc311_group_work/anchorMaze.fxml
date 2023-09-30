@@ -37,7 +37,7 @@
             </menus>
         </MenuBar>
         <Group fx:id="group_Rectangles" layoutX="14.0" layoutY="30.0" />
-        <StackPane fx:id="robotImgContainer" layoutX="46.0" layoutY="258.0" prefHeight="17.0" prefWidth="18.0">
+        <StackPane fx:id="robotImgContainer" layoutX="546.0" layoutY="238.0" prefHeight="17.0" prefWidth="18.0">
             <children>
                 <ImageView fx:id="robotImg" fitHeight="17.0" fitWidth="18.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true" translateY="25.0">
                     <image>
