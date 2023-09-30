@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane prefHeight="363.0" prefWidth="209.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csc311_group_work.MazeController">
+    <children>
+        <MenuBar layoutY="1.0" prefHeight="25.0" prefWidth="448.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                        <MenuItem fx:id="switch2" mnemonicParsing="false" onAction="#switchToMaze1" text="Switch Screens" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <ImageView fx:id="maze2Image" fitHeight="336.0" fitWidth="537.0" layoutY="27.0" onKeyPressed="#handleCarMovement" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../images/maze2.png" />
+            </image>
+        </ImageView>
+      <StackPane fx:id="carImgContainer" layoutX="8.0" layoutY="84.0" prefHeight="25.0" prefWidth="41.0">
+         <children>
+            <ImageView fitHeight="48.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/car.png" />
+               </image>
+            </ImageView>
+         </children>
+      </StackPane>
+    </children>
+</AnchorPane>
