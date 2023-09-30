@@ -4,15 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96dad00f-4aab-471b-aad4-bcb13d630424" name="Changes" comment="misc xml changes">
+    <list default="true" id="96dad00f-4aab-471b-aad4-bcb13d630424" name="Changes" comment="turn switch case into enhanced form">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/csc311_group_work/MazeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/csc311_group_work/MazeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/csc311_group_work/anchorMaze.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/csc311_group_work/anchorMaze.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/csc311_group_work/MazeTwoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/csc311_group_work/maze2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/csc311_group_work/maze2.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -163,7 +170,63 @@
       <option name="project" value="LOCAL" />
       <updated>1696111992402</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="handle exceptions for rightward movement into right outer edge of maze&#10;&#10;Exceptions thrown are the same as for leftward movement towards the left outer edge of the maze. In this case we simply catch the exception and do not print the stack trace.">
+      <option name="closed" value="true" />
+      <created>1696112737714</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1696112737714</updated>
+    </task>
+    <task id="LOCAL-00007" summary="move robot back to original starting position">
+      <option name="closed" value="true" />
+      <created>1696112760489</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1696112760489</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add congratulations msg and code comment">
+      <option name="closed" value="true" />
+      <created>1696112932027</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1696112932027</updated>
+    </task>
+    <task id="LOCAL-00009" summary="create maze two controller class">
+      <option name="closed" value="true" />
+      <created>1696113148857</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1696113148857</updated>
+    </task>
+    <task id="LOCAL-00010" summary="change controller class">
+      <option name="closed" value="true" />
+      <created>1696113500642</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1696113500642</updated>
+    </task>
+    <task id="LOCAL-00011" summary="import all existing maze2 code from maze one controller into maze2 controller">
+      <option name="closed" value="true" />
+      <created>1696113529278</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1696113529278</updated>
+    </task>
+    <task id="LOCAL-00012" summary="turn switch case into enhanced form">
+      <option name="closed" value="true" />
+      <created>1696113731568</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1696113731568</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,6 +260,13 @@
     <MESSAGE value="add fxID for anchor pane" />
     <MESSAGE value="handle RuntimeException &amp; IndexOutOfBounds exception for leftwards movement&#10;&#10;Aforementioned exceptions were being thrown when player was hitting the left outer edge of the maze" />
     <MESSAGE value="misc xml changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="misc xml changes" />
+    <MESSAGE value="handle exceptions for rightward movement into right outer edge of maze&#10;&#10;Exceptions thrown are the same as for leftward movement towards the left outer edge of the maze. In this case we simply catch the exception and do not print the stack trace." />
+    <MESSAGE value="move robot back to original starting position" />
+    <MESSAGE value="add congratulations msg and code comment" />
+    <MESSAGE value="create maze two controller class" />
+    <MESSAGE value="change controller class" />
+    <MESSAGE value="import all existing maze2 code from maze one controller into maze2 controller" />
+    <MESSAGE value="turn switch case into enhanced form" />
+    <option name="LAST_COMMIT_MESSAGE" value="turn switch case into enhanced form" />
   </component>
 </project>
