@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96dad00f-4aab-471b-aad4-bcb13d630424" name="Changes" comment="delete MazeTwoController class (implementation handled by a team member)">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/csc311_group_work/MazeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/csc311_group_work/MazeController.java" afterDir="false" />
-    </list>
+    <list default="true" id="96dad00f-4aab-471b-aad4-bcb13d630424" name="Changes" comment="Update to make new controller for second maze. Added functionality to menu bar." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,11 +13,17 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -80,12 +84,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/jjmac/IdeaProjects/CSC311_Group_Work/src/main/resources/com/example/csc311_group_work",
+    "git-widget-placeholder": "Mikes-branch",
+    "last_opened_file_path": "C:/Users/micha/IdeaProjects/CSC311/311 Scrap Projects/CSC311_Group_Work",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -96,6 +101,85 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DjangoTestsConfigurationType">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Python.FlaskServer">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <method v="2" />
+    </configuration>
     <configuration name="MazeApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.csc311_group_work.MazeApplication" />
       <module name="CSC311_Group_Work" />
@@ -109,8 +193,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MazeApplication" />
         <item itemvalue="Application.MazeApplication" />
       </list>
     </recent_temporary>
@@ -127,6 +223,7 @@
       <workItem from="1695679176167" duration="4091000" />
       <workItem from="1695768754657" duration="438000" />
       <workItem from="1695855208736" duration="1718000" />
+      <workItem from="1695944552212" duration="383000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Upload of framework for maze project.">
       <option name="closed" value="true" />
@@ -144,95 +241,79 @@
       <option name="project" value="LOCAL" />
       <updated>1695768800121</updated>
     </task>
-    <task id="LOCAL-00003" summary="add fxID for anchor pane">
+    <task id="LOCAL-00003" summary="update fxml">
       <option name="closed" value="true" />
-      <created>1696111839114</created>
+      <created>1695944618488</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1696111839114</updated>
+      <updated>1695944618488</updated>
     </task>
-    <task id="LOCAL-00004" summary="handle RuntimeException &amp; IndexOutOfBounds exception for leftwards movement&#10;&#10;Aforementioned exceptions were being thrown when player was hitting the left outer edge of the maze">
+    <task id="LOCAL-00004" summary="add collisionHandler method">
       <option name="closed" value="true" />
-      <created>1696111979796</created>
+      <created>1695944631422</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1696111979796</updated>
+      <updated>1695944631422</updated>
     </task>
-    <task id="LOCAL-00005" summary="misc xml changes">
+    <task id="LOCAL-00005" summary="add components from FXML">
       <option name="closed" value="true" />
-      <created>1696111992402</created>
+      <created>1695944653614</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1696111992402</updated>
+      <updated>1695944653614</updated>
     </task>
-    <task id="LOCAL-00006" summary="handle exceptions for rightward movement into right outer edge of maze&#10;&#10;Exceptions thrown are the same as for leftward movement towards the left outer edge of the maze. In this case we simply catch the exception and do not print the stack trace.">
+    <task id="LOCAL-00006" summary="create collisionTimer and create temp handle method">
       <option name="closed" value="true" />
-      <created>1696112737714</created>
+      <created>1695944716527</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1696112737714</updated>
+      <updated>1695944716527</updated>
     </task>
-    <task id="LOCAL-00007" summary="move robot back to original starting position">
+    <task id="LOCAL-00007" summary="add each rectangle to walls list">
       <option name="closed" value="true" />
-      <created>1696112760489</created>
+      <created>1695944738798</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1696112760489</updated>
+      <updated>1695944738798</updated>
     </task>
-    <task id="LOCAL-00008" summary="add congratulations msg and code comment">
+    <task id="LOCAL-00008" summary="enabled switch MenuItem to open a screen with the other maze.">
       <option name="closed" value="true" />
-      <created>1696112932027</created>
+      <created>1696048620307</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1696112932027</updated>
+      <updated>1696048620307</updated>
     </task>
-    <task id="LOCAL-00009" summary="create maze two controller class">
+    <task id="LOCAL-00009" summary="enabled switch MenuItem to open a screen with the other maze.">
       <option name="closed" value="true" />
-      <created>1696113148857</created>
+      <created>1696048802007</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1696113148857</updated>
+      <updated>1696048802007</updated>
     </task>
-    <task id="LOCAL-00010" summary="change controller class">
+    <task id="LOCAL-00010" summary="tried to mimmick the code that moves the robot to move the car, but im having trouble getting it to work">
       <option name="closed" value="true" />
-      <created>1696113500642</created>
+      <created>1696094014536</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1696113500642</updated>
+      <updated>1696094014536</updated>
     </task>
-    <task id="LOCAL-00011" summary="import all existing maze2 code from maze one controller into maze2 controller">
+    <task id="LOCAL-00011" summary="Update to make new controller for second maze. Added functionality to menu bar.">
       <option name="closed" value="true" />
-      <created>1696113529278</created>
+      <created>1696115669816</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1696113529278</updated>
+      <updated>1696115669817</updated>
     </task>
-    <task id="LOCAL-00012" summary="turn switch case into enhanced form">
-      <option name="closed" value="true" />
-      <created>1696113731568</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1696113731568</updated>
-    </task>
-    <task id="LOCAL-00013" summary="delete MazeTwoController class (implementation handled by a team member)">
-      <option name="closed" value="true" />
-      <created>1696116003591</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1696116003591</updated>
-    </task>
-    <option name="localTasksCounter" value="14" />
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,7 +330,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="Mikes-branch" />
                       </list>
                     </value>
                   </entry>
@@ -263,17 +344,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Upload of framework for maze project." />
-    <MESSAGE value="add fxID for anchor pane" />
-    <MESSAGE value="handle RuntimeException &amp; IndexOutOfBounds exception for leftwards movement&#10;&#10;Aforementioned exceptions were being thrown when player was hitting the left outer edge of the maze" />
-    <MESSAGE value="misc xml changes" />
-    <MESSAGE value="handle exceptions for rightward movement into right outer edge of maze&#10;&#10;Exceptions thrown are the same as for leftward movement towards the left outer edge of the maze. In this case we simply catch the exception and do not print the stack trace." />
-    <MESSAGE value="move robot back to original starting position" />
-    <MESSAGE value="add congratulations msg and code comment" />
-    <MESSAGE value="create maze two controller class" />
-    <MESSAGE value="change controller class" />
-    <MESSAGE value="import all existing maze2 code from maze one controller into maze2 controller" />
-    <MESSAGE value="turn switch case into enhanced form" />
-    <MESSAGE value="delete MazeTwoController class (implementation handled by a team member)" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete MazeTwoController class (implementation handled by a team member)" />
+    <MESSAGE value="update fxml" />
+    <MESSAGE value="add collisionHandler method" />
+    <MESSAGE value="add components from FXML" />
+    <MESSAGE value="create collisionTimer and create temp handle method" />
+    <MESSAGE value="add each rectangle to walls list" />
+    <MESSAGE value="enabled switch MenuItem to open a screen with the other maze." />
+    <MESSAGE value="tried to mimmick the code that moves the robot to move the car, but im having trouble getting it to work" />
+    <MESSAGE value="Update to make new controller for second maze. Added functionality to menu bar." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update to make new controller for second maze. Added functionality to menu bar." />
   </component>
 </project>
