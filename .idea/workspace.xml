@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96dad00f-4aab-471b-aad4-bcb13d630424" name="Changes" comment="add fxID for anchor pane">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="96dad00f-4aab-471b-aad4-bcb13d630424" name="Changes" comment="misc xml changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/csc311_group_work/MazeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/csc311_group_work/MazeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/csc311_group_work/anchorMaze.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/csc311_group_work/anchorMaze.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +147,23 @@
       <option name="project" value="LOCAL" />
       <updated>1696111839114</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="handle RuntimeException &amp; IndexOutOfBounds exception for leftwards movement&#10;&#10;Aforementioned exceptions were being thrown when player was hitting the left outer edge of the maze">
+      <option name="closed" value="true" />
+      <created>1696111979796</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1696111979796</updated>
+    </task>
+    <task id="LOCAL-00005" summary="misc xml changes">
+      <option name="closed" value="true" />
+      <created>1696111992402</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1696111992402</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +195,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Upload of framework for maze project." />
     <MESSAGE value="add fxID for anchor pane" />
-    <option name="LAST_COMMIT_MESSAGE" value="add fxID for anchor pane" />
+    <MESSAGE value="handle RuntimeException &amp; IndexOutOfBounds exception for leftwards movement&#10;&#10;Aforementioned exceptions were being thrown when player was hitting the left outer edge of the maze" />
+    <MESSAGE value="misc xml changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="misc xml changes" />
   </component>
 </project>
