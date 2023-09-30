@@ -60,29 +60,29 @@ public class MazeTwoController {
         WritableImage writableImage = maze2Img.snapshot(new SnapshotParameters(), null);
         PixelReader pixelReader = writableImage.getPixelReader();
 
-        switch (event.getCode()){
-            case UP:
-                if (carCanMoveUp(carImgContainer.getLayoutX(), carImgContainer.getLayoutY(), pixelReader)){
+        switch (event.getCode()) {
+            case UP -> {
+                if (carCanMoveUp(carImgContainer.getLayoutX(), carImgContainer.getLayoutY(), pixelReader)) {
                     moveCar(0, -MOVE_SIZE);
                 }
-                break;
-            case DOWN:
-                if (carCanMoveDown(carImgContainer.getLayoutX(), carImgContainer.getLayoutY(), pixelReader)){
+            }
+            case DOWN -> {
+                if (carCanMoveDown(carImgContainer.getLayoutX(), carImgContainer.getLayoutY(), pixelReader)) {
                     moveCar(0, MOVE_SIZE);
+                    System.out.println("car moving down");
                 }
-                break;
-            case LEFT:
-                if (carCanMoveLeft(carImgContainer.getLayoutX(), carImgContainer.getLayoutY(), pixelReader)){
+            }
+            case LEFT -> {
+                if (carCanMoveLeft(carImgContainer.getLayoutX(), carImgContainer.getLayoutY(), pixelReader)) {
                     moveCar(-MOVE_SIZE, 0);
                 }
-                break;
-            case RIGHT:
-                if (carCanMoveRight(carImgContainer.getLayoutX(), carImgContainer.getLayoutY(), pixelReader)){
+            }
+            case RIGHT -> {
+                if (carCanMoveRight(carImgContainer.getLayoutX(), carImgContainer.getLayoutY(), pixelReader)) {
                     moveCar(MOVE_SIZE, 0);
                 }
-                break;
-            default:
-                break;
+            }
+            default -> { }
         }
     }
 
