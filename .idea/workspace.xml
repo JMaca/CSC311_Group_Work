@@ -4,16 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96dad00f-4aab-471b-aad4-bcb13d630424" name="Changes" comment="add each rectangle to walls list">
+    <list default="true" id="96dad00f-4aab-471b-aad4-bcb13d630424" name="Changes" comment="enabled switch MenuItem to open a screen with the other maze.">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/csc311_group_work/MazeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/csc311_group_work/MazeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/csc311_group_work/anchorMaze.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/csc311_group_work/anchorMaze.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -49,7 +63,7 @@
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
-        <option name="accountId" value="0d79cd86-af69-4cf4-a714-3ada44dddd3b" />
+        <option name="accountId" value="b553e5b3-24be-4189-b82d-48a3944d790d" />
         <option name="url" value="https://github.com/JMaca/CSC311_Group_Work.git" />
       </UrlAndAccount>
     </option>
@@ -74,8 +88,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/jjmac/IdeaProjects/CSC311_Group_Work/src/main/resources/com/example/csc311_group_work",
+    "git-widget-placeholder": "Mikes-branch",
+    "last_opened_file_path": "C:/Users/micha/IdeaProjects/CSC311/311 Scrap Projects/CSC311_Group_Work",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -90,19 +104,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="MazeApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.csc311_group_work.MazeApplication" />
-      <module name="CSC311_Group_Work" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.csc311_group_work.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="DjangoTestsConfigurationType">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -122,17 +123,6 @@
       <option name="USE_OPTIONS" value="false" />
       <option name="OPTIONS" value="" />
       <method v="2" />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -193,8 +183,33 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <method v="2" />
     </configuration>
+    <configuration name="MazeApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.csc311_group_work.MazeApplication" />
+      <module name="CSC311_Group_Work" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.csc311_group_work.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MazeApplication" />
         <item itemvalue="Application.MazeApplication" />
       </list>
     </recent_temporary>
@@ -305,6 +320,7 @@
     <MESSAGE value="add components from FXML" />
     <MESSAGE value="create collisionTimer and create temp handle method" />
     <MESSAGE value="add each rectangle to walls list" />
-    <option name="LAST_COMMIT_MESSAGE" value="add each rectangle to walls list" />
+    <MESSAGE value="enabled switch MenuItem to open a screen with the other maze." />
+    <option name="LAST_COMMIT_MESSAGE" value="enabled switch MenuItem to open a screen with the other maze." />
   </component>
 </project>
