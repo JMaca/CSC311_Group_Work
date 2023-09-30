@@ -10,6 +10,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
 import javafx.scene.image.PixelReader;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.layout.StackPane;
 import javafx.scene.SnapshotParameters;
@@ -19,6 +20,7 @@ import java.io.IOException;
 
 public class MazeController{
 
+    public AnchorPane anchorPane;
     @FXML
     private ImageView mazeImg, maze2Img;
     @FXML
@@ -182,14 +184,6 @@ public class MazeController{
         carImgContainer.setLayoutY(carImgContainer.getLayoutY() + dy);
     }
 
-
-
-
-
-
-
-
-
     /**
      *  Handles the movement of the robot based on what key is being pressed
      * @param event when arrow key is pressed
@@ -244,14 +238,18 @@ public class MazeController{
      * @return returns true or false based on if the robot can move left
      */
     private boolean canMoveLeft(double x, double y, PixelReader pixelReader){
-        //This for loop checks the line of pixels to the left of the robot
-        for(int i = 0; i < robotImgContainer.getPrefHeight(); i++) {
-            Color color = pixelReader.getColor((int) x - 1, (int) y + i);
-            if(isWall(color)) {
-                return false;
+        if (x >= 0) {
+            //This for loop checks the line of pixels to the left of the robot
+            for (int i = 0; i < robotImgContainer.getPrefHeight(); i++) {
+                Color color = pixelReader.getColor((int) x - 1, (int) y + i);
+                if (isWall(color)) {
+                    return false;
+                }
             }
+            return true;
+        } else {
+            return false;
         }
-        return true;
     }
     /**
      * Checks to see if the robot can move right without hitting a wall
@@ -261,9 +259,9 @@ public class MazeController{
      * @return returns true or false based on if the robot can move right
      */
     private boolean canMoveRight(double x, double y, PixelReader pixelReader){
-        for (int i = 0; i < robotImgContainer.getPrefHeight(); i++){
+        for (int i = 0; i < robotImgContainer.getPrefHeight(); i++) {
             Color color = pixelReader.getColor((int) (x + robotImgContainer.getPrefWidth() + 1), (int) y + i);
-            if (isWall(color)){
+            if (isWall(color)) {
                 return false;
             }
         }
