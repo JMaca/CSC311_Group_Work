@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
 
-<AnchorPane prefHeight="363.0" prefWidth="209.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csc311_group_work.MazeController">
+<AnchorPane prefHeight="363.0" prefWidth="209.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csc311_group_work.MazeTwoController">
     <children>
         <MenuBar layoutY="1.0" prefHeight="25.0" prefWidth="448.0">
             <menus>
