@@ -21,6 +21,7 @@
                 <Menu mnemonicParsing="false" text="File">
                     <items>
                         <MenuItem fx:id="switch1" mnemonicParsing="false" onAction="#switchToMaze2" text="Switch" />
+                  <MenuItem fx:id="restartMenuItem" mnemonicParsing="false" onAction="#restartOnAction" text="Restart" />
                     </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Help">
@@ -36,7 +37,7 @@
             </menus>
         </MenuBar>
         <Group fx:id="group_Rectangles" layoutX="14.0" layoutY="30.0" />
-        <StackPane fx:id="robotImgContainer" layoutX="546.0" layoutY="238.0" prefHeight="17.0" prefWidth="18.0">
+        <StackPane fx:id="robotImgContainer" layoutX="21.0" layoutY="259.0" prefHeight="17.0" prefWidth="18.0">
             <children>
                 <ImageView fx:id="robotImg" fitHeight="17.0" fitWidth="18.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true" translateY="25.0">
                     <image>

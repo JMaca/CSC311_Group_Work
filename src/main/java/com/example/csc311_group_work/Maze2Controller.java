@@ -28,7 +28,8 @@ public class Maze2Controller {
     @FXML
     private StackPane carImgContainer;
     private static final double MOVE_SIZE = 3.0; //Change this to change speed of car
-
+    private static int START_POSITION_Y = 84;
+    private static int START_POSITION_X = 8;
     @FXML private Stage stage;
     @FXML
     private Scene scene;
@@ -178,6 +179,26 @@ public class Maze2Controller {
     private void moveCar(double dx, double dy){
         carImgContainer.setLayoutX(carImgContainer.getLayoutX() + dx);
         carImgContainer.setLayoutY(carImgContainer.getLayoutY() + dy);
+    }
+    private void gameReset() {
+        carImgContainer.setLayoutX(START_POSITION_X);
+        carImgContainer.setLayoutY(START_POSITION_Y);
+    }
+    @FXML
+    public void restartOnAction(ActionEvent actionEvent) {
+        ButtonType yesBtn = new ButtonType("YES", ButtonBar.ButtonData.OK_DONE);
+        ButtonType noBtn = new ButtonType("NO", ButtonBar.ButtonData.CANCEL_CLOSE);
+        Alert alert = new Alert(Alert.AlertType.WARNING,
+                "Are you sure you want to restart the game?",
+                yesBtn,
+                noBtn);
+        alert.setTitle("Restart Warning");
+        Optional<ButtonType> result = alert.showAndWait();
+
+        if (result.orElse(noBtn) == yesBtn) {
+            carImgContainer.setLayoutX(START_POSITION_X);
+            carImgContainer.setLayoutY(START_POSITION_Y);
+        }
     }
 
     public void closeOnAction(ActionEvent actionEvent) {

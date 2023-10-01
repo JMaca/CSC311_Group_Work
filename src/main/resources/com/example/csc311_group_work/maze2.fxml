@@ -15,6 +15,7 @@
                 <Menu mnemonicParsing="false" text="File">
                     <items>
                         <MenuItem fx:id="switch2" mnemonicParsing="false" onAction="#switchToMaze1" text="Switch Screens" />
+                  <MenuItem fx:id="restartMenuItem" mnemonicParsing="false" onAction="#restartOnAction" text="Restart" />
                     </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Help">
