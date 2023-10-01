@@ -18,6 +18,7 @@ import javafx.stage.Stage;
 
 
 import java.io.IOException;
+import java.util.Objects;
 import java.util.Optional;
 
 public class MazeController {
@@ -26,6 +27,8 @@ public class MazeController {
     private ImageView mazeImg, maze2Img, carImage;
     @FXML
     private StackPane robotImgContainer, carImgContainer;
+    @FXML
+    MenuBar menuBar;
     private static final double MOVE_SIZE = 3.0; //Change this to change speed of robot
     private static int START_POSITION_Y = 259;
     private static int START_POSITION_X = 21;
@@ -46,11 +49,11 @@ public class MazeController {
      */
     @FXML
     public void switchToMaze2(ActionEvent event) throws IOException {
-        stage = new Stage();
-        root = FXMLLoader.load(getClass().getResource("maze2.fxml"));
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        Parent maze2Root = FXMLLoader.load(getClass().getResource("maze2.fxml"));
+        Scene maze2Scene = new Scene(maze2Root);
+        Stage window = (Stage) menuBar.getScene().getWindow();
+        window.setScene(maze2Scene);
+        window.show();
     }
 
     /**
@@ -129,7 +132,7 @@ public class MazeController {
         return false;
     }
 
-        /**
+    /**
      * Checks to see if the robot can move right without hitting a wall
      *
      * @param x x location

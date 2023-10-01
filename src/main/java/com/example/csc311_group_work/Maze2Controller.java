@@ -3,13 +3,16 @@ package com.example.csc311_group_work;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Point3D;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.SnapshotParameters;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonBar;
 import javafx.scene.control.ButtonType;
-import javafx.scene.control.MenuItem;
+import javafx.scene.control.MenuBar;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.PixelReader;
 import javafx.scene.image.WritableImage;
@@ -17,7 +20,6 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import javafx.stage.Window;
 
 import java.io.IOException;
 import java.util.Optional;
@@ -25,28 +27,22 @@ import java.util.Optional;
 public class Maze2Controller {
     @FXML
     private ImageView maze2Image, carImage;
+
     @FXML
     private StackPane carImgContainer;
+    @FXML
+    MenuBar menuBar;
     private static final double MOVE_SIZE = 3.0; //Change this to change speed of car
     private static int START_POSITION_Y = 84;
     private static int START_POSITION_X = 8;
-    @FXML
-    private Stage stage;
-    @FXML
-    private Scene scene;
-
-    @FXML
-    private Parent root;
-
-    @FXML
-    private MenuItem switch1;
 
     @FXML
     public void switchToMaze1(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("maze2.fxml"));
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.close();
+        Parent maze2Root = FXMLLoader.load(getClass().getResource("anchorMaze.fxml"));
+        Scene maze2Scene = new Scene(maze2Root);
+        Stage window = (Stage) menuBar.getScene().getWindow();
+        window.setScene(maze2Scene);
+        window.show();
     }
 
 
@@ -72,31 +68,43 @@ public class Maze2Controller {
         PixelReader pixelReader = writableImage.getPixelReader();
         double x = carImgContainer.getLayoutX();
         double y = carImgContainer.getLayoutY();
+        resetRotationAxis();
 
         switch (event.getCode()) {
             case UP:
                 if (carCanMoveUp(carImgContainer.getLayoutX(), carImgContainer.getLayoutY(), pixelReader)) {
+                    carImage.setRotate(-90);
                     moveCar(0, -MOVE_SIZE);
                 }
                 break;
             case DOWN:
                 if (carCanMoveDown(carImgContainer.getLayoutX(), carImgContainer.getLayoutY(), pixelReader)) {
+                    carImage.setRotate(90);
                     moveCar(0, MOVE_SIZE);
                 }
                 break;
             case LEFT:
                 if (carCanMoveLeft(carImgContainer.getLayoutX(), carImgContainer.getLayoutY(), pixelReader)) {
+                    carImage.setRotate(180);
+                    Point3D pointLeft = new Point3D(0, 50, 0);
+                    carImage.setRotationAxis(pointLeft);
                     moveCar(-MOVE_SIZE, 0);
                 }
                 break;
             case RIGHT:
                 if (carCanMoveRight(carImgContainer.getLayoutX(), carImgContainer.getLayoutY(), pixelReader)) {
+                    carImage.setRotate(0);
                     moveCar(MOVE_SIZE, 0);
                 }
                 break;
             default:
                 break;
         }
+    }
+
+    private void resetRotationAxis() {
+        Point3D point = new Point3D(0, 0, 1);
+        carImage.setRotationAxis(point);
     }
 
     private boolean isMaze2w(Color color) {
@@ -195,7 +203,6 @@ public class Maze2Controller {
             }
             return true;
         } catch (Exception e) {
-
         }
         return false;
     }

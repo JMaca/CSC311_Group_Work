@@ -10,11 +10,11 @@
 
 <AnchorPane prefHeight="363.0" prefWidth="209.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csc311_group_work.Maze2Controller">
     <children>
-        <MenuBar layoutY="1.0" prefHeight="25.0" prefWidth="448.0">
+        <MenuBar fx:id="menuBar" focusTraversable="false" layoutY="1.0" prefHeight="25.0" prefWidth="448.0">
             <menus>
                 <Menu mnemonicParsing="false" text="File">
                     <items>
-                        <MenuItem fx:id="switch2" mnemonicParsing="false" onAction="#switchToMaze1" text="Switch Screens" />
+                        <MenuItem fx:id="changeMaze" mnemonicParsing="false" onAction="#switchToMaze1" text="Change Maze" />
                   <MenuItem fx:id="restartMenuItem" mnemonicParsing="false" onAction="#restartOnAction" text="Restart" />
                     </items>
                 </Menu>

@@ -16,11 +16,11 @@
                 <Image url="@../../../images/maze.png" />
             </image>
         </ImageView>
-        <MenuBar layoutY="1.0" prefHeight="26.0" prefWidth="600.0">
+        <MenuBar fx:id="menuBar" layoutY="1.0" prefHeight="26.0" prefWidth="600.0">
             <menus>
                 <Menu mnemonicParsing="false" text="File">
                     <items>
-                        <MenuItem fx:id="switch1" mnemonicParsing="false" onAction="#switchToMaze2" text="Switch" />
+                        <MenuItem fx:id="changeMaze" mnemonicParsing="false" onAction="#switchToMaze2" text="Change Maze" />
                   <MenuItem fx:id="restartMenuItem" mnemonicParsing="false" onAction="#restartOnAction" text="Restart" />
                     </items>
                 </Menu>
