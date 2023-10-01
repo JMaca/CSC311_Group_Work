@@ -30,7 +30,8 @@ public class Maze2Controller {
     private static final double MOVE_SIZE = 3.0; //Change this to change speed of car
     private static int START_POSITION_Y = 84;
     private static int START_POSITION_X = 8;
-    @FXML private Stage stage;
+    @FXML
+    private Stage stage;
     @FXML
     private Scene scene;
 
@@ -42,10 +43,9 @@ public class Maze2Controller {
 
     @FXML
     public void switchToMaze1(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("anchorMaze.fxml"));
-        scene= new Scene(root);
+        root = FXMLLoader.load(getClass().getResource("maze2.fxml"));
+        scene = new Scene(root);
         stage.setScene(scene);
-        stage.show();
         stage.close();
     }
 
@@ -59,36 +59,38 @@ public class Maze2Controller {
 
 
     //for the stack pane to move, link the imageView of the maze with the handleKey Movement
+
     /**
-     *  Handles the movement of the car based on what key is being pressed
+     * Handles the movement of the car based on what key is being pressed
+     *
      * @param event when arrow key is pressed
      */
     @FXML
-    public void handleCarMovement(KeyEvent event){
+    public void handleCarMovement(KeyEvent event) {
         //PixelReader will get the pixel colors
         WritableImage writableImage = maze2Image.snapshot(new SnapshotParameters(), null);
         PixelReader pixelReader = writableImage.getPixelReader();
         double x = carImgContainer.getLayoutX();
         double y = carImgContainer.getLayoutY();
 
-        switch (event.getCode()){
+        switch (event.getCode()) {
             case UP:
-                if (carCanMoveUp(carImgContainer.getLayoutX(), carImgContainer.getLayoutY(), pixelReader)){
+                if (carCanMoveUp(carImgContainer.getLayoutX(), carImgContainer.getLayoutY(), pixelReader)) {
                     moveCar(0, -MOVE_SIZE);
                 }
                 break;
             case DOWN:
-                if (carCanMoveDown(carImgContainer.getLayoutX(), carImgContainer.getLayoutY(), pixelReader)){
+                if (carCanMoveDown(carImgContainer.getLayoutX(), carImgContainer.getLayoutY(), pixelReader)) {
                     moveCar(0, MOVE_SIZE);
                 }
                 break;
             case LEFT:
-                if (carCanMoveLeft(carImgContainer.getLayoutX(), carImgContainer.getLayoutY(), pixelReader)){
+                if (carCanMoveLeft(carImgContainer.getLayoutX(), carImgContainer.getLayoutY(), pixelReader)) {
                     moveCar(-MOVE_SIZE, 0);
                 }
                 break;
             case RIGHT:
-                if (carCanMoveRight(carImgContainer.getLayoutX(), carImgContainer.getLayoutY(), pixelReader)){
+                if (carCanMoveRight(carImgContainer.getLayoutX(), carImgContainer.getLayoutY(), pixelReader)) {
                     moveCar(MOVE_SIZE, 0);
                 }
                 break;
@@ -97,23 +99,24 @@ public class Maze2Controller {
         }
     }
 
-    private boolean isMaze2w(Color color){
+    private boolean isMaze2w(Color color) {
         // RGB values for blue wall
         return color.equals(Color.web("#003fffff"));
     }
 
     /**
      * Checks to see if the car can move left without hitting a wall
-     * @param x x location
-     * @param y y location
+     *
+     * @param x           x location
+     * @param y           y location
      * @param pixelReader used to read the pixel color from mazeImg
      * @return returns true or false based on if the car can move left
      */
-    private boolean carCanMoveLeft(double x, double y, PixelReader pixelReader){
+    private boolean carCanMoveLeft(double x, double y, PixelReader pixelReader) {
         //This for loop checks the line of pixels to the left of the car
-        for(int i = 0; i < carImgContainer.getPrefHeight(); i++) {
+        for (int i = 0; i < carImgContainer.getPrefHeight(); i++) {
             Color color = pixelReader.getColor((int) x - 1, (int) y + i);
-            if(isMaze2w(color)) {
+            if (isMaze2w(color)) {
                 return false;
             }
         }
@@ -122,15 +125,16 @@ public class Maze2Controller {
 
     /**
      * Checks to see if the car can move right without hitting a wall
-     * @param x x location
-     * @param y y location
+     *
+     * @param x           x location
+     * @param y           y location
      * @param pixelReader used to read the pixel color from mazeImg
      * @return returns true or false based on if the car can move right
      */
-    private boolean carCanMoveRight(double x, double y, PixelReader pixelReader){
-        for (int i = 0; i < carImgContainer.getPrefHeight(); i++){
+    private boolean carCanMoveRight(double x, double y, PixelReader pixelReader) {
+        for (int i = 0; i < carImgContainer.getPrefHeight(); i++) {
             Color color = pixelReader.getColor((int) (x + carImgContainer.getPrefWidth() + 1), (int) y + i);
-            if (isMaze2w(color)){
+            if (isMaze2w(color)) {
                 return false;
             }
         }
@@ -139,51 +143,80 @@ public class Maze2Controller {
 
     /**
      * Checks to see if the car can move up without hitting a wall
-     * @param x x location
-     * @param y y location
+     *
+     * @param x           x location
+     * @param y           y location
      * @param pixelReader used to read the pixel color from mazeImg
      * @return returns true or false based on if the car can move up
      */
-    private boolean carCanMoveUp(double x, double y, PixelReader pixelReader){
-        for (int i = 0; i < carImgContainer.getPrefWidth(); i++) {
-            Color color = pixelReader.getColor((int) x + i, (int) y - 1);
-            if (isMaze2w(color)){
-                return false;
+    private boolean carCanMoveUp(double x, double y, PixelReader pixelReader) {
+        try {
+            checkForWin();
+            for (int i = 0; i < carImgContainer.getPrefWidth(); i++) {
+                Color color = pixelReader.getColor((int) x + i, (int) y - 1);
+                if (isMaze2w(color)) {
+                    return false;
+                }
             }
+            return true;
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
-        return true;
     }
 
-    /**
+        /**
      * Checks to see if the car can move down without hitting a wall
+     *
      * @param x x location
      * @param y y location
      * @param pixelReader used to read the pixel color from mazeImg
      * @return returns true or false based on if the car can move down
      */
-    private boolean carCanMoveDown(double x, double y, PixelReader pixelReader){
-        for (int i = 0; i < carImgContainer.getPrefWidth(); i++){
-            Color color = pixelReader.getColor((int) x + i, (int) (y + carImgContainer.getPrefHeight() + 1));
-            if (isMaze2w(color)){
-                return false;
+    int congratsMsgCounter = 1; // Counter for congrats message
+
+    private boolean carCanMoveDown(double x, double y, PixelReader pixelReader) {
+        try {
+            checkForWin();
+            for (int i = 0; i < carImgContainer.getPrefWidth(); i++) {
+                Color color = pixelReader.getColor((int) x + i, (int) (y + carImgContainer.getPrefHeight() + 1));
+                if (isMaze2w(color)) {
+                    return false;
+                }
             }
+            return true;
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
-        return true;
+    }
+
+    private void checkForWin() {
+        if (carImgContainer.getLayoutX() >= 370 && carImgContainer.getLayoutY() >= 280) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Congrats");
+            alert.setHeaderText("You are a true Maze Runner!");
+            alert.setContentText("Well done finishing this maze! You are a winner!");
+            alert.show();
+            congratsMsgCounter--;
+            gameReset();
+        }
     }
 
     /**
      * Moves the robots position
+     *
      * @param dx change in x direction
      * @param dy change in y direction
      */
-    private void moveCar(double dx, double dy){
+    private void moveCar(double dx, double dy) {
         carImgContainer.setLayoutX(carImgContainer.getLayoutX() + dx);
         carImgContainer.setLayoutY(carImgContainer.getLayoutY() + dy);
     }
+
     private void gameReset() {
         carImgContainer.setLayoutX(START_POSITION_X);
         carImgContainer.setLayoutY(START_POSITION_Y);
     }
+
     @FXML
     public void restartOnAction(ActionEvent actionEvent) {
         ButtonType yesBtn = new ButtonType("YES", ButtonBar.ButtonData.OK_DONE);

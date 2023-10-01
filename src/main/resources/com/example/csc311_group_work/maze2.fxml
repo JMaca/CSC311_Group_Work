@@ -30,19 +30,18 @@
             </Menu>
             </menus>
         </MenuBar>
-        <ImageView fx:id="maze2Image" fitHeight="336.0" fitWidth="537.0" focusTraversable="true" layoutY="27.0" onKeyPressed="#handleCarMovement" pickOnBounds="true" preserveRatio="true">
+        <ImageView fx:id="maze2Image" fitHeight="338.0" fitWidth="448.0" focusTraversable="true" layoutY="25.0" onKeyPressed="#handleCarMovement" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../images/maze2.png" />
             </image>
         </ImageView>
-      <StackPane fx:id="carImgContainer" focusTraversable="true" layoutX="8.0" layoutY="84.0" prefHeight="25.0" prefWidth="41.0">
+      <StackPane fx:id="carImgContainer" focusTraversable="true" layoutX="13.0" layoutY="31.0" prefHeight="48.0" prefWidth="42.0">
          <children>
-            <ImageView fx:id="carImage" fitHeight="48.0" fitWidth="55.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="carImage" fitHeight="27.0" fitWidth="55.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true" translateY="25.0">
                <image>
                   <Image url="@../../../images/car.png" />
                </image>
             </ImageView>
-         </children>
-      </StackPane>
+         </children></StackPane>
     </children>
 </AnchorPane>
