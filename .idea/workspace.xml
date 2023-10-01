@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96dad00f-4aab-471b-aad4-bcb13d630424" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/csc311_group_work/Maze2Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/csc311_group_work/Maze2Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/csc311_group_work/maze2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/csc311_group_work/maze2.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/csc311_group_work/MazeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/csc311_group_work/MazeController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,7 +238,7 @@
       <workItem from="1695944552212" duration="383000" />
       <workItem from="1696115809888" duration="915000" />
       <workItem from="1696117211166" duration="2307000" />
-      <workItem from="1696121229284" duration="1405000" />
+      <workItem from="1696121229284" duration="1641000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Upload of framework for maze project.">
       <option name="closed" value="true" />
@@ -345,7 +344,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696119505029</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Update to make victory pop up window for maze2. Added restart method to menu bar and for victory for maze2.">
+      <option name="closed" value="true" />
+      <created>1696122685620</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1696122685620</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -385,6 +392,7 @@
     <MESSAGE value="tried to mimmick the code that moves the robot to move the car, but im having trouble getting it to work" />
     <MESSAGE value="Update to make new controller for second maze. Added functionality to menu bar." />
     <MESSAGE value="Update to make victory pop up window. Added restart to menu bar." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update to make victory pop up window. Added restart to menu bar." />
+    <MESSAGE value="Update to make victory pop up window for maze2. Added restart method to menu bar and for victory for maze2." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update to make victory pop up window for maze2. Added restart method to menu bar and for victory for maze2." />
   </component>
 </project>

@@ -113,14 +113,19 @@ public class Maze2Controller {
      * @return returns true or false based on if the car can move left
      */
     private boolean carCanMoveLeft(double x, double y, PixelReader pixelReader) {
-        //This for loop checks the line of pixels to the left of the car
-        for (int i = 0; i < carImgContainer.getPrefHeight(); i++) {
-            Color color = pixelReader.getColor((int) x - 1, (int) y + i);
-            if (isMaze2w(color)) {
-                return false;
+        try {
+            //This for loop checks the line of pixels to the left of the car
+            for (int i = 0; i < carImgContainer.getPrefHeight(); i++) {
+                Color color = pixelReader.getColor((int) x - 1, (int) y + i);
+                if (isMaze2w(color)) {
+                    return false;
+                }
             }
+            return true;
+        } catch (Exception e) {
+
         }
-        return true;
+        return false;
     }
 
     /**
@@ -132,13 +137,18 @@ public class Maze2Controller {
      * @return returns true or false based on if the car can move right
      */
     private boolean carCanMoveRight(double x, double y, PixelReader pixelReader) {
-        for (int i = 0; i < carImgContainer.getPrefHeight(); i++) {
-            Color color = pixelReader.getColor((int) (x + carImgContainer.getPrefWidth() + 1), (int) y + i);
-            if (isMaze2w(color)) {
-                return false;
+        try {
+            for (int i = 0; i < carImgContainer.getPrefHeight(); i++) {
+                Color color = pixelReader.getColor((int) (x + carImgContainer.getPrefWidth() + 1), (int) y + i);
+                if (isMaze2w(color)) {
+                    return false;
+                }
             }
+            return true;
+        } catch (Exception e) {
+
         }
-        return true;
+        return false;
     }
 
     /**
@@ -160,11 +170,11 @@ public class Maze2Controller {
             }
             return true;
         } catch (Exception e) {
-            throw new RuntimeException(e);
         }
+        return false;
     }
 
-        /**
+    /**
      * Checks to see if the car can move down without hitting a wall
      *
      * @param x x location
@@ -185,8 +195,9 @@ public class Maze2Controller {
             }
             return true;
         } catch (Exception e) {
-            throw new RuntimeException(e);
+
         }
+        return false;
     }
 
     private void checkForWin() {

@@ -110,21 +110,26 @@ public class MazeController {
      * @return returns true or false based on if the robot can move left
      */
     private boolean canMoveLeft(double x, double y, PixelReader pixelReader) {
-        if (x >= 0) {
-            //This for loop checks the line of pixels to the left of the robot
-            for (int i = 0; i < robotImgContainer.getPrefHeight(); i++) {
-                Color color = pixelReader.getColor((int) x - 1, (int) y + i);
-                if (isWall(color)) {
-                    return false;
+        try {
+            if (x >= 0) {
+                //This for loop checks the line of pixels to the left of the robot
+                for (int i = 0; i < robotImgContainer.getPrefHeight(); i++) {
+                    Color color = pixelReader.getColor((int) x - 1, (int) y + i);
+                    if (isWall(color)) {
+                        return false;
+                    }
                 }
+                return true;
+            } else {
+                return false;
             }
-            return true;
-        } else {
-            return false;
+        } catch (Exception e) {
+
         }
+        return false;
     }
 
-    /**
+        /**
      * Checks to see if the robot can move right without hitting a wall
      *
      * @param x x location
